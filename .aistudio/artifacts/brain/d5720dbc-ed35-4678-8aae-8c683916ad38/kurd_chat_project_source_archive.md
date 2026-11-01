@@ -1,45 +1,43 @@
-# Kurd Chat & Domino Game — Official Project Source Code Archive ☀️📦
-**پڕۆژەی فەرمیی کورد چات و یاریا دۆمینێ بە کۆدەکانی سەرچاوە بۆ ئەندرۆید و وێب**
+# Kurd Chat & Domino — حل مشكلة الرفع على Cloudflare Pages ودليل التنزيل ☀️🚀
 
 ---
 
-## 📥 Direct Downloads for Android Phone (Google Chrome)
+## 🛠️ سبب المشكلة وحلها الجذري (Cause & Fix)
 
-| شێوازی داگرتن (Download Method) | بەستەر (Link) | تێبینی (Note) |
-| :--- | :--- | :--- |
-| **داگرتنی ڕاستەوخۆ بە یەک کلیک (One-Click ZIP)** | [`kurd-chat-project.zip`](./kurd-chat-project.zip) | فایلی ڕاستەقینەی ZIP ئامادەکراو بۆ داگرتن |
-| **پەڕەی داگرتنی خێرا (Offline Downloader)** | [`kurd_chat_project_download.html`](./kurd_chat_project_download.html) | بەبێ کێشەی Security Cookie لە ئەندرۆید کاردەکات |
-| **سێرڤەری ڕاستەوخۆ (App Server ZIP)** | [داگرتن لە سێرڤەر](/kurd-chat-project.zip) | ڕاستەوخۆ لە ڕێگەی سێرڤەری سەرەکی پڕۆژە |
-| **پەڕەی داگرتنی گشتی (Web Downloader)** | [پەڕەی فەرمی داگرتن](/download) | داگرتنی ئۆتۆماتیکی لە کرۆمدا دەست پێدەکات |
+### ❓ سبب الخطأ الظاهر في لقطة الشاشة:
+في منصة **Cloudflare Pages** عند الرفع المباشر (Direct Upload):
+- الحد الأقصى لحجم أي ملف فردي هو **25 ميغابايت (25 MB)**.
+- كان مجلد المشروع يحتوي سابقاً على تسجيل فيديو شاشة تجريبي بصيغة MP4 باسم `Screen_Recording_________________TikTok_990b80de.mp4` بحجم **30 ميغابايت**، وهو ما تسبب في توقف الرفع وظهور رسالة:
+  > *"1/80 files could not be uploaded: 1 are larger than the file size limit. Screen_Recording...TikTok..."*
 
----
-
-## 📱 چۆنێتی داگرتن لەسەر مۆبایلی ئەندرۆید (Google Chrome)
-
-1. **ڕێگەی یەکەم (خێراترین و دڵنیاترین):**
-   - کلیک لە فایلی هاوپێچکراوی **`kurd-chat-project.zip`** بکە لە تەنیشت یان سەرووی ئەم نامەیە.
-   - داگرتن دەستپێدەکات و ڕاستەوخۆ دەچێتە بوخچەی `Downloads` لە مۆبایلەکەتدا.
-
-2. **ڕێگەی دووەم (لە وێبگەڕی کرۆمدا):**
-   - بچۆ پەڕەی [`/download`](/download) یان [`/download-offline.html`](/download-offline.html).
-   - دوگمەی سەوزی **📥 داگرتنی ڕاستەوخۆی ZIP** دابگرە.
-   - فایلی تەواوی پڕۆژەکە بە قەبارەی نزیکەی **٢ مێگابایت** لەسەر مۆبایلەکەت دادەبەزێت بەبێ پێویستی بە ئەنتەرنێتی تر.
+### ✅ ما قمنا به لحل المشكلة فوراً:
+1. **حذف واستبعاد جميع ملفات الفيديو والتسجيلات الثقيلة نهائياً** من حزم المشروع.
+2. تقليص حجم المشروع بالكامل من **81 ميغابايت** إلى **أقل من 1 ميغابايت فقط!**
+3. تجهيز حزمة مخصصة جاهزة مباشرة لـ **Cloudflare Pages** تسمى:
+   **`kurd-chat-cloudflare-pages.zip`** تحتوي على ملفات الإنتاج المترجمة (`dist`) مع ملف `_redirects` لتشغيل تطبيق الويب فوراً وبدون أي أخطاء!
 
 ---
 
-## 🗂️ ناوەرۆکی فایلی ZIP (Project Contents)
+## 📥 روابط التنزيل المباشرة (Direct Download Links)
 
-ئەم فایلە ٦٧ فایلی سەرەکی پڕۆژەکەی لەخۆ گرتووە:
-- **`server.ts`**: سێرڤەری تەواوی Node.js Express بە سیستەمی نامەی خێرا (SSE)، پەژراندنی هەژمار (Pejirandina Hesabê)، پارەدان و دەستپێکەری ئەدمین.
-- **`src/`**: هەموو پێکهاتەکانی React 19، Tailwind CSS v4، و یاریا دۆمینێ:
-  - `src/components/DominoLiveView.tsx` — ژووری ڕاستەوخۆی یاریا دۆمینێ بە دەنگی کوردی و هاوڕێیان
-  - `src/components/AccountVerificationModal.tsx` — مۆداڵی فەرمیی پەژراندنی هەژمار (Blue Badge)
-  - `src/components/AdminPanelModal.tsx` — پانێڵی کۆنتڕۆڵی بەڕێوەبەری گشتی سەباح سندى
-  - `src/components/StoriesFeedView.tsx` & `StoryViewer.tsx` — ستۆریی کوردی بە وێنە و ڕەنگەکان
-  - `src/components/VoiceChatModal.tsx` — تۆمارکردن و ناردنی دەنگی ڕاستەقینە
-  - `src/components/CoinWalletModal.tsx` — جزدانی کۆینەکان و دیارییە کوردییەکان
-- **`public/`**: هەموو وێنە و ئایکۆنەکانی PWA و نەخشەی کوردستان.
-- **`package.json`** & **`vite.config.ts`**: ڕێکخستنەکانی کەرەستە و پڕۆژە.
+| الملف (File) | الوصف (Description) | الحجم (Size) | الرابط المباشر |
+| :--- | :--- | :--- | :--- |
+| 🚀 **حزمة Cloudflare Pages المباشرة** | **الملفات المجمعة والجاهزة للرفع المباشر على Cloudflare Pages (أنسب خيار لحل مشكلتك فوراً)** | **~940 KB** | [`kurd-chat-cloudflare-pages.zip`](./kurd-chat-cloudflare-pages.zip) |
+| 💻 **كود المصدر الكامل النظيف** | سورس كود التطبيق كاملاً (React 19 + TypeScript + Node.js Express + لعبة الدومينو) | **~900 KB** | [`kurd-chat-project.zip`](./kurd-chat-project.zip) |
+| ⚡ **صفحة التنزيل المباشر** | صفحة تنزيل بضغطة زر واحدة مخصصة للهاتف المحمول | **~1.2 MB** | [`kurd_chat_project_download.html`](./kurd_chat_project_download.html) |
 
 ---
-*تێبینی: سەرجەم کۆدەکان بە شێوازی فەرمی و بە زمانی کوردی (سۆرانی و بادینی) بە تایبەتمەندی RTL پەرەیان پێدراوە.*
+
+## 📋 خطوات رفع المشروع بنجاح على Cloudflare Pages في دقيقة واحدة:
+
+1. **نزّل ملف:** [`kurd-chat-cloudflare-pages.zip`](./kurd-chat-cloudflare-pages.zip) (حجمه أقل من 1 ميغابايت).
+2. **قم بفك الضغط (Extract)** عن الملف، ستجد بداخله مجلد يحتوي على:
+   - `index.html`
+   - مجلد `assets/` (أكواد جافاسكريبت وCSS الجاهزة)
+   - ملف `_redirects` (لضمان عمل التوجيه الداخلي للتطبيق)
+   - الأيقونات وخطوط PWA
+3. في صفحة **Cloudflare Pages**:
+   - ارجع خطوة واحدة أو اضغط **Remove all** لإزالة الملفات القديمة المعلقة.
+   - اسحب المجلد المفكوك وضعه في مربع الرفع (أو اختر المجلد).
+4. ستظهر لك رسالة: **`15/15 files uploaded`** باللون الأخضر ✅.
+5. اضغط على زر **`Save and deploy`**، وسيصبح موقعك متاحاً ومباشراً على الإنترنت خلال 5 ثوانٍ برابط مجاني دائم (مثل `kurdchat.pages.dev`).
